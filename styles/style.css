@@ -1,0 +1,160 @@
+body {
+  background-color: #f2eae2;
+}
+
+main {
+  height: 100%;
+}
+
+.card-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 600px;
+  height: 450px;
+  border-radius: 10px;
+
+  display: flex;
+
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    width: 343px;
+    height: 611px;
+  }
+}
+
+.card > * {
+  flex-basis: fit-content;
+}
+
+/* Product Image Styling */
+
+.product-image-mobile {
+  display: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-image-desktop {
+  border-radius: 10px 0 0 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-image-mobile {
+    display: block;
+  }
+
+  .product-image-desktop {
+    display: none;
+  }
+}
+
+/* Product Details Styling */
+
+.product-details > * {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.product-category {
+  font: 500 12px/15px "Montserrat";
+  letter-spacing: 5px;
+  color: #6c7289;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+
+.product-name {
+  font: 32px/1 "Fraunces";
+  color: #1c232b;
+  margin-bottom: 24px;
+}
+
+.product-descr {
+  font: 14px/23px "Montserrat";
+  color: #6c7289;
+  margin-bottom: 29px;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-details > * {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .product-category {
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+  .product-name {
+    margin-bottom: 16px;
+  }
+
+  .product-descr {
+    margin-bottom: 24px;
+  }
+}
+
+/* Product Price Styling */
+.product-price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.product-sale-price {
+  font: 32px/1 "Fraunces";
+  color: #3d8168;
+  margin-right: 19px;
+}
+
+.product-listing-price {
+  font-family: 13px/23px "Montserrat";
+  color: #6c7289;
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-price {
+    margin-bottom: 20px;
+  }
+}
+
+/* Add To Cart styling */
+.add-to-cart {
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background-color: hsl(158, 36%, 37%);
+  position: relative;
+}
+
+.add-to-cart:hover {
+  background: #1a4032;
+}
+
+.cart-button {
+  text-decoration: none;
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font: 14px/17px "Montserrat";
+  padding-right: 62px;
+}
+
+.cart-image {
+  position: absolute;
+  left: 63px;
+  cursor: pointer;
+}
